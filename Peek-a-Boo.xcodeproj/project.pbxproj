@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6D249C7E189C4F8100C8E362 /* murray.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D249C7D189C4F8100C8E362 /* murray.jpeg */; };
+		6D249C81189C712E00C8E362 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D249C80189C712E00C8E362 /* GridView.m */; };
+		6D249C84189C95D000C8E362 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D249C83189C95D000C8E362 /* CustomView.m */; };
 		6DAE81C6189AE91600DA1578 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAE81C5189AE91600DA1578 /* Foundation.framework */; };
 		6DAE81C8189AE91600DA1578 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAE81C7189AE91600DA1578 /* CoreGraphics.framework */; };
 		6DAE81CA189AE91600DA1578 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAE81C9189AE91600DA1578 /* UIKit.framework */; };
@@ -41,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		6D249C7D189C4F8100C8E362 /* murray.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = murray.jpeg; sourceTree = "<group>"; };
+		6D249C7F189C712E00C8E362 /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
+		6D249C80189C712E00C8E362 /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
+		6D249C82189C95D000C8E362 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		6D249C83189C95D000C8E362 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		6DAE81C2189AE91600DA1578 /* Peek-a-Boo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Peek-a-Boo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DAE81C5189AE91600DA1578 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6DAE81C7189AE91600DA1578 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,8 +139,12 @@
 				6DAE81D7189AE91600DA1578 /* AppDelegate.m */,
 				6DAE81FA189AE94A00DA1578 /* UserViewController.h */,
 				6DAE81FB189AE94A00DA1578 /* UserViewController.m */,
+				6D249C82189C95D000C8E362 /* CustomView.h */,
+				6D249C83189C95D000C8E362 /* CustomView.m */,
 				6DAE81FF189AED1A00DA1578 /* AddUserViewController.h */,
 				6DAE8200189AED1A00DA1578 /* AddUserViewController.m */,
+				6D249C7F189C712E00C8E362 /* GridView.h */,
+				6D249C80189C712E00C8E362 /* GridView.m */,
 				6DAE81DC189AE91600DA1578 /* Images.xcassets */,
 				6DAE81D9189AE91600DA1578 /* Peek_a_Boo.xcdatamodeld */,
 				6DAE8202189AEE0700DA1578 /* User.h */,
@@ -279,10 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D249C81189C712E00C8E362 /* GridView.m in Sources */,
 				6DAE81D8189AE91600DA1578 /* AppDelegate.m in Sources */,
 				6DAE8201189AED1A00DA1578 /* AddUserViewController.m in Sources */,
 				6DAE8204189AEE0700DA1578 /* User.m in Sources */,
 				6DAE81D4189AE91600DA1578 /* main.m in Sources */,
+				6D249C84189C95D000C8E362 /* CustomView.m in Sources */,
 				6DAE81FC189AE94A00DA1578 /* UserViewController.m in Sources */,
 				6DAE81DB189AE91600DA1578 /* Peek_a_Boo.xcdatamodeld in Sources */,
 			);

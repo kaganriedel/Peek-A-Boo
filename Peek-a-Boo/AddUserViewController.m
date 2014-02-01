@@ -20,16 +20,11 @@
     __weak IBOutlet UITextField *stateTextField;
     __weak IBOutlet UITextField *zipTextField;
     __weak IBOutlet UIImageView *imageView;
-    
-
-    
 }
 
 @end
 
 @implementation AddUserViewController
-
-
 
 - (void)viewDidLoad
 {
@@ -51,7 +46,6 @@
         imageSuffix = [userDefaults integerForKey:@"imageCount"];
     }
     
-    
     NSManagedObjectContext *managedObjectContext = ((AppDelegate*)([UIApplication sharedApplication].delegate)).managedObjectContext;
     
     User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:managedObjectContext];
@@ -60,26 +54,12 @@
     user.email = emailTextField.text;
     user.address = [NSString stringWithFormat:@"%@, %@ %@, %@", addressTextField.text, cityTextField.text, stateTextField.text, zipTextField.text];
     NSLog(@"%@",user.address);
-
-
-    
-    
-    
-    [self.view endEditing:YES];
-    
-    [self.navigationController popViewControllerAnimated:YES];
-    
-    
-    
-    
     
     NSData *imageData = UIImagePNGRepresentation(imageView.image);
     
 
     NSURL *documentsDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
-    
     NSURL *imageURL =[documentsDirectory URLByAppendingPathComponent:[NSString stringWithFormat:@"cached_%i.png",imageSuffix]];
-    
     NSLog((@"pre writing to file"));
     if (![imageData writeToURL:imageURL atomically:NO])
     {
@@ -95,6 +75,11 @@
         NSLog(@"the cachedImagedPath is %@",imageURL);
     }
     [managedObjectContext save:nil];
+    
+    [self.view endEditing:YES];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 - (IBAction)addPhotoButtonPressed:(id)sender

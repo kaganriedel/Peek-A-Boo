@@ -19,6 +19,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wy7-gM-ebw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="25D-5G-gKS" id="Pxf-z7-dsI"/>
+                                    <outletCollection property="gestureRecognizers" destination="eYk-7W-Kct" appends="YES" id="PyF-fD-sWp"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,6 +41,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpW-sQ-4o9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eYk-7W-Kct">
+                    <connections>
+                        <action selector="didTap:" destination="25D-5G-gKS" id="UP5-ta-buX"/>
+                        <outlet property="delegate" destination="25D-5G-gKS" id="j0t-DQ-3rI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="555" y="27"/>
         </scene>
